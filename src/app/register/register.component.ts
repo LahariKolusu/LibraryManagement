@@ -23,24 +23,44 @@ regGroup;
       typeofuser:['',[Validators.required]]
     },{validators: customValidators })
   }
+// submit()
+// {
+//   let typeofuser=localStorage.getItem(this.regGroup.value.typeofuser);
+//   let userdetails=JSON.stringify(this.regGroup.value);
+//   localStorage.setItem(this.regGroup.value.email,userdetails);
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
   
   submit()
   {
     let userdetails=JSON.stringify(this.regGroup.value);
     localStorage.setItem(this.regGroup.value.email,userdetails);
-    // localStorage.setItem(this.regGroup.value.typeofuser,userdetails);
-    let typeofuser=sessionStorage.getItem("typeofuser");
-    // console.log(typeofuser);
-    // let admin="admin";
-
-
-    if(typeofuser=="admin")
+    localStorage.setItem(this.regGroup.value.typeofuser,userdetails);
+    // alert("value:"+this.regGroup.value.typeofuser);
+    let type=this.regGroup.value.typeofuser;
+    alert(type);
+    if(type=="admin")
     {
+      // alert("control in if");
     this.router.navigate(['/admin']);
     }
-    else{
+    else
+    {
+      // alert("control in else");
       this.router.navigate(['/user']);
     }
   }
 
-}
+ }
