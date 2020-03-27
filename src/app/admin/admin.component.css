@@ -1,0 +1,33 @@
+#body
+{
+
+    background-image: url("/assets/images/bg2.jpg") ;
+    /* background-size: cover; */
+}
+.card
+{
+    margin-top: 13px;
+    width: 500px;
+    height: 549px;
+}
+.card-body{
+    background-color:peachpuff;
+}
+.adminlogo
+{
+    height:200px;
+    width:200px;
+    margin-left: 125px;
+}
+.form-control
+{
+    margin-top: 40px;
+}
+#btn
+{
+    margin-top: 70px;
+    background-color: black;
+    color: white;
+    width: 250px;
+    margin-left: 100px;
+}

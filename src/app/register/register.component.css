@@ -1,0 +1,31 @@
+body{
+    background-image: url("/assets/images/bg2.jpg") ;
+}
+.card
+{
+    width: 500px;
+    height: 50px;
+}
+.cardbody{
+    background-color:peachpuff;
+}
+.form-group
+{
+    width: 400px;
+    /* padding-left: 60px; */
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+    background-color:black;
+    color: white;
+    padding-bottom: 7px;
+    width: 100%;
+}
+#btn
+{
+    background-color: black;
+    color: white;
+    width: 250px;
+    margin-left: 75px;
+}

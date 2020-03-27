@@ -1,0 +1,41 @@
+<body class="body">
+<div class="card  offset-4 mt-3">
+    <div class="cardbody">
+        <div>
+            <h1>Sign Up</h1>
+        </div>
+        <form [formGroup]="regGroup">
+            <div class="form-group offset-1">
+                <input type="text" name="fname" placeholder="Enter Your First Name" id="fname" class="form-control" ngModel formControlName="fname">
+            </div>
+            <div class="form-group offset-1">
+                <input type="text" name="lname" placeholder="Enter Your Last Name" id="lname" class="form-control" ngModel formControlName="lname">
+            </div>
+            <div class="form-group offset-1">
+                <input type="email" name="email" placeholder="Enter Your Email" id="email" class="form-control" ngModel formControlName="email">
+            </div>
+            <div class="form-group offset-1">
+                <input type="password" name="pwd" placeholder="Enter Your password" id="pwd" class="form-control" ngModel formControlName="pwd">
+            </div>
+            <div class="form-group offset-1">
+                <input type="password" name="confirmpwd" placeholder="Re-Enter Your password" id="confirmpwd" class="form-control" ngModel formControlName="confirmpwd">
+            </div>
+            <div class="form-group offset-1">
+                <input type="text" name="idno" placeholder="Enter Your ID Number" id="idno" class="form-control" ngModel formControlName="idno">
+            </div>
+            <div class="form-group offset-1">
+                <select id="select" class="form-control" placeholder="Select Type Of User" name="typeofuser" ngModel formControlName="typeofuser">
+                    <option value="0">--Select Type Of User--</option>
+                    <option #admin value="admin" >Admin</option>
+                    <option  #user value="student">User</option>
+                </select>
+            </div>
+
+            <div class="form-group offset-1">
+                <button type="submit" class="form-control" id="btn" (click)="submit()" [disabled]="regGroup.invalid">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<!-- <router-outlet></router-outlet> -->

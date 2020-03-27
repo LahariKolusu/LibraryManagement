@@ -1,0 +1,129 @@
+header{
+    background-color: black;
+    height: 63px;
+}
+ul{
+    text-decoration: none;
+    list-style-type: none;
+    float: right;
+}
+ul li {
+    margin-right: 80px;
+    margin-top: 15px;
+   display: inline-block;
+    
+}
+ul li a{
+    color:white;
+    padding: 10px 15px 15px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.6s ease;
+}
+ul li a:hover{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+.name{
+float: left;
+margin-left: 30px;
+color: white;
+font-size: 30px;
+font-family: cursive;
+}
+.icon
+{
+    color: white;
+}
+.icon1
+{
+    color: black;
+}
+.borrowtable{
+    padding: 10px;
+    background-color: red;
+    margin-top: 5px;
+}
+span{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+
+}
+.nav
+{
+    margin-top: 5px;
+    border: 1px dashed blue;
+    background-color: white;
+    color: blue;
+}
+.nav a{
+    margin-left: 50px;
+}
+.nav a:hover{
+    background-color: rgb(0, 140, 255);
+    color: white;
+    border-radius: 5px;
+}
+.btnplus
+{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+#plus
+{
+    background-color: rgb(14, 223, 14);
+    border-radius: 20px;
+    color: white;
+}
+#print
+{
+    float: right;
+    margin-right: 20px;
+    background-color: rgba(0, 162, 255, 0.678);
+    color: white;
+    border-radius: 20px;
+}
+.drpdwn
+{
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.numberdrpdwn
+{
+    border-radius: 5px;
+}
+.drpdwntxt
+{
+    font-size:18px;
+    color: black;
+}
+.search
+{
+    float:right;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.table
+{
+    margin-top: 10px;
+}
+.delete
+{
+    background-color:red;
+    color: white;
+    width: 40px;
+    height: 30px;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+.edit
+{
+    background-color:rgb(20, 201, 20);
+    color: white;
+    width: 40px;
+    height: 30px;
+    padding-top: 5px;
+    border-radius: 5px;
+}

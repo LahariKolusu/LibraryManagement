@@ -1,0 +1,47 @@
+header{
+    background-color: black;
+    height: 63px;
+}
+#drop
+{
+    color: black;
+}
+#drop:hover{
+    background-color: black;
+    color: white;
+}
+ul{
+    text-decoration: none;
+    list-style-type: none;
+    float: right;
+}
+ul li {
+    margin-left: 70px;
+    margin-right: 100px;
+    margin-top: 15px;
+   display: inline-block;
+    
+}
+ul li a{
+    color:white;
+    padding: 10px 15px 15px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.6s ease;
+}
+ul li a:hover{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+.name{
+float: left;
+margin-left: 30px;
+color: white;
+font-size: 30px;
+font-family: cursive;
+}
+.icon
+{
+    color: white;
+}

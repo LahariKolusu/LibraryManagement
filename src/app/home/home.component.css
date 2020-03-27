@@ -1,0 +1,18 @@
+.homeimg
+{
+    height: 400px;
+    width: 100%;
+}
+.scroll{
+    margin-top: 5px;
+    background-color:maroon;
+    color: white;
+}
+.theory
+{
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
