@@ -1,0 +1,116 @@
+<div class="borrowtable">
+    <i class="fa fa-user fa-fw icon" aria-hidden="true"></i>
+    <span>Borrow Table</span>
+</div>
+<div class="card card1">
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="borrowname">Borrower Name</label><br>
+                <select name="borrowname" class="form-control">
+                    <option>Select an Option</option>
+                </select></div>
+            <div class="form-group">
+                <label for="duedate">Due Date</label><br>
+                <input type="date" class="form-control">
+            </div>
+            <div>
+                <button type="button" class="btn " id="plus">
+                    <span class="badge badge-dark">+</span> Borrow
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="card card2">
+    <div class="card-body">
+        <div class="selectbook">
+            <p>Select Book</p>
+        </div>
+        <div class="drpdwn">
+            <form>
+                <input type="number" min="1" max="100" value="1" class="numberdrpdwn">
+                <span class="drpdwntxt">records per page</span>
+                <input type="text" placeholder="Search...." class="search">
+            </form>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ACC NO.</th>
+                    <th scope="col">BOOK TITLE</th>
+                    <th scope="col">CATEGORY</th>
+                    <th scope="col">AUTHOR</th>
+                    <th scope="col">PUBLISHER NAME</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col">ADD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>15</td>
+                    <td>Natural Resources</td>
+                    <td>Microbiology</td>
+                    <td>Robin Kerrod</td>
+                    <td>Marshall</td>
+                    <td>Old</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Introduction to Microbiology</td>
+                    <td>Microbiology</td>
+                    <td>Caralyn Bradshaw, Michael Seals</td>
+                    <td>Prentice Hall, New Jersey</td>
+                    <td>New</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Logical Reasoning and concepts</td>
+                    <td>Psycology</td>
+                    <td>..</td>
+                    <td>..</td>
+                    <td>New</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Projectile</td>
+                    <td>Physics</td>
+                    <td>Brian Knapp</td>
+                    <td>Prentice Hall,Inc</td>
+                    <td>Old</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Literature</td>
+                    <td>English and literary studies</td>
+                    <td>Greg Glowka</td>
+                    <td>Prentice Hall,Inc</td>
+                    <td>Old</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Matrix</td>
+                    <td>Mathematics</td>
+                    <td>Lexicon</td>
+                    <td>Pulication Inc.,Lexicon</td>
+                    <td>Old</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>C Programming</td>
+                    <td>Computer</td>
+                    <td>Clarke Donald</td>
+                    <td>Publisher, Westport</td>
+                    <td>Old</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

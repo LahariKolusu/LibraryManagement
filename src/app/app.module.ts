@@ -23,6 +23,8 @@ import { AddbooksModule } from './addbooks/addbooks.module';
 import { AdminModule } from './admin/admin.module';
 import { AdpageModule } from './adpage/adpage.module';
 import { UserModule } from './user/user.module';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { UserhomeModule } from './userhome/userhome.module';
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { UserModule } from './user/user.module';
     AdpageComponent,
     LoggedInComponent,
     AddbooksComponent,
+    UserhomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { UserModule } from './user/user.module';
     AddbooksModule,
     AdminModule,
     AdpageModule,
-    UserModule
+    UserModule,
+    UserhomeModule
 
   ],
   providers: [],

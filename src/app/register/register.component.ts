@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, EmailValidator, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { customValidators } from './validators';
 
@@ -11,46 +11,35 @@ import { customValidators } from './validators';
 export class RegisterComponent implements OnInit {
 
   constructor(private builder:FormBuilder, private router:Router) { }
-regGroup;
+regGroup:FormGroup;
+submitted = false;
   ngOnInit() {
     this.regGroup=this.builder.group({
       fname:['',[Validators.required]],
       lname:['',[Validators.required]],
-      email:['',[Validators.required]],
-      pwd: ['',[Validators.required,Validators.minLength(5)]],
-      confirmpwd: ['',[Validators.required,Validators.minLength(5)]],
-      idno:['',[Validators.required]],
+      email:['',[Validators.required,Validators.email]],
+      pwd: ['',[Validators.required,Validators.minLength(6)]],
+      confirmpwd: ['',[Validators.required,Validators.minLength(6)]],
+      // idno:['',[Validators.required]],
       typeofuser:['',[Validators.required]]
     },{validators: customValidators })
   }
-// submit()
-// {
-//   let typeofuser=localStorage.getItem(this.regGroup.value.typeofuser);
-//   let userdetails=JSON.stringify(this.regGroup.value);
-//   localStorage.setItem(this.regGroup.value.email,userdetails);
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-  
   submit()
   {
+    this.submitted = true;
+
+    // stop the process here if form is invalid
+    if (this.regGroup.invalid) 
+    {
+        return;
+    }
+    alert('SUCCESS!!');
     let userdetails=JSON.stringify(this.regGroup.value);
     localStorage.setItem(this.regGroup.value.email,userdetails);
     localStorage.setItem(this.regGroup.value.typeofuser,userdetails);
     // alert("value:"+this.regGroup.value.typeofuser);
     let type=this.regGroup.value.typeofuser;
-    alert(type);
+    // alert(type);
     if(type=="admin")
     {
       // alert("control in if");

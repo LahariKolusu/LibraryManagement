@@ -12,6 +12,7 @@ import { AdpageComponent } from './adpage/adpage.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoggedInComponent } from './logged-in/logged-in.component';
 import { AddbooksComponent } from './addbooks/addbooks.component';
+import { UserhomeComponent } from './userhome/userhome.component';
 
 const routes: Routes = [
   {path:'navbar',component:NavbarComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'adpage',component:AdpageComponent},
   {path:'loggedIn',component:LoggedInComponent},
   {path:'addbooks',component:AddbooksComponent},
+  {path:'userhome',component:UserhomeComponent},
   {path:"**",redirectTo:"curosel"}
 ];
 

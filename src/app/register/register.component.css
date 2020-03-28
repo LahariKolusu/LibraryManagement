@@ -1,31 +1,41 @@
-body{
+#body
+{
+
     background-image: url("/assets/images/bg2.jpg") ;
+    /* background-size: cover; */
 }
 .card
 {
+    margin-top: 13px; 
     width: 500px;
-    height: 50px;
+    height: 700px;
 }
-.cardbody{
+/* input
+{
+    margin-top: 50px;
+} */
+.card-body{
     background-color:peachpuff;
 }
-.form-group
+.form-control
 {
-    width: 400px;
-    /* padding-left: 60px; */
-    margin-top: 20px;
-}
-h1{
-    text-align: center;
-    background-color:black;
-    color: white;
-    padding-bottom: 7px;
-    width: 100%;
+    margin-top: 25px;
 }
 #btn
 {
+    margin-top: 30px;
     background-color: black;
     color: white;
     width: 250px;
-    margin-left: 75px;
+    margin-left: 100px;
 }
+h1{
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 50px;
+}
+
+
+
+
+

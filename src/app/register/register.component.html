@@ -1,41 +1,57 @@
-<body class="body">
-<div class="card  offset-4 mt-3">
-    <div class="cardbody">
-        <div>
-            <h1>Sign Up</h1>
+<body id="body">
+    <div class="card  offset-4">
+        <div class="card-body">
+            <div class="heading">
+                <h1>Sign Up</h1>
+            </div>
+            <form [formGroup]="regGroup">
+                <div class="form-group " >
+                    <input type="text"  placeholder="Enter Your First Name"  class="form-control" ngModel formControlName="fname" [ngClass]="{ 'is-invalid': submitted &amp;&amp; regGroup.controls.fname.errors }">
+                    <div *ngIf="submitted &amp;&amp; regGroup.controls.fname.errors" class="text-danger">
+                        <div *ngIf="regGroup.controls.fname.errors.required">First Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <input type="text" placeholder="Enter Your Last Name"  class="form-control" ngModel formControlName="lname" [ngClass]="{ 'is-invalid': submitted &amp;&amp; regGroup.controls.lname.errors }">
+                    <div *ngIf="submitted &amp;&amp; regGroup.controls.lname.errors" class="text-danger">
+                        <div *ngIf="regGroup.controls.lname.errors.required">Last Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <input type="email"  placeholder="Enter Your Email"  class="form-control" ngModel  formControlName="email" [ngClass]="{ 'is-invalid': submitted &amp;&amp; regGroup.controls.email.errors }">
+                    <div *ngIf="submitted &amp;&amp; regGroup.controls.email.errors" class="text-danger">
+                        <div *ngIf="regGroup.controls.email.errors.required">Email is required</div>
+                        <div *ngIf="regGroup.controls.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <input type="password" placeholder="Enter Your password"  class="form-control" ngModel formControlName="pwd" [ngClass]="{ 'is-invalid': submitted &amp;&amp; regGroup.controls.pwd.errors }">
+                    <div *ngIf="submitted &amp;&amp; regGroup.controls.pwd.errors" class="text-danger">
+                        <div *ngIf="regGroup.controls.pwd.errors.required">Password is required</div>
+                        <div *ngIf="regGroup.controls.pwd.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <input type="password"  placeholder="Re-Enter Your password"  class="form-control" ngModel formControlName="confirmpwd" [ngClass]="{ 'is-invalid': submitted &amp;&amp; regGroup.controls.confirmpwd.errors }">
+                    <div *ngIf="submitted &amp;&amp; regGroup.controls.pwd.errors" class="text-danger">
+                        <div *ngIf="regGroup.controls.confirmpwd.errors.required">Password Must be Same</div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <select  class="form-control" placeholder="Select Type Of User"  ngModel formControlName="typeofuser" [ngClass]="{ 'is-invalid': submitted &amp;&amp; regGroup.controls.typeofuser.errors }">
+                        <option value="0">--Select Type Of User--</option>
+                        <option  value="admin" >Admin</option>
+                        <option   value="student">User</option>
+                    </select>
+                    <div *ngIf="submitted &amp;&amp; regGroup.controls.typeofuser.errors" class="text-danger">
+                        <div *ngIf="regGroup.controls.typeofuser.errors.required">Please Select Type Of User</div>
+                    </div>
+                </div>
+    
+                <div class="form-group ">
+                    <button type="submit" class="form-control" id="btn" (click)="submit()" >Sign Up</button>
+                </div>
+            </form>
         </div>
-        <form [formGroup]="regGroup">
-            <div class="form-group offset-1">
-                <input type="text" name="fname" placeholder="Enter Your First Name" id="fname" class="form-control" ngModel formControlName="fname">
-            </div>
-            <div class="form-group offset-1">
-                <input type="text" name="lname" placeholder="Enter Your Last Name" id="lname" class="form-control" ngModel formControlName="lname">
-            </div>
-            <div class="form-group offset-1">
-                <input type="email" name="email" placeholder="Enter Your Email" id="email" class="form-control" ngModel formControlName="email">
-            </div>
-            <div class="form-group offset-1">
-                <input type="password" name="pwd" placeholder="Enter Your password" id="pwd" class="form-control" ngModel formControlName="pwd">
-            </div>
-            <div class="form-group offset-1">
-                <input type="password" name="confirmpwd" placeholder="Re-Enter Your password" id="confirmpwd" class="form-control" ngModel formControlName="confirmpwd">
-            </div>
-            <div class="form-group offset-1">
-                <input type="text" name="idno" placeholder="Enter Your ID Number" id="idno" class="form-control" ngModel formControlName="idno">
-            </div>
-            <div class="form-group offset-1">
-                <select id="select" class="form-control" placeholder="Select Type Of User" name="typeofuser" ngModel formControlName="typeofuser">
-                    <option value="0">--Select Type Of User--</option>
-                    <option  value="admin" >Admin</option>
-                    <option   value="student">User</option>
-                </select>
-            </div>
-
-            <div class="form-group offset-1">
-                <button type="submit" class="form-control" id="btn" (click)="submit()" [disabled]="regGroup.invalid">Sign Up</button>
-            </div>
-        </form>
     </div>
-</div>
-</body>
-<!-- <router-outlet></router-outlet> -->
+    </body>
