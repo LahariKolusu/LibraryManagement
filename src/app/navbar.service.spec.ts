@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AdminService } from './admin.service';
+import { NavbarService } from './navbar.service';
 
-describe('AdminService', () => {
+describe('NavbarService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: AdminService = TestBed.get(AdminService);
+    const service: NavbarService = TestBed.get(NavbarService);
     expect(service).toBeTruthy();
   });
 });

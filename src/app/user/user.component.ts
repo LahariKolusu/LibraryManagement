@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NavbarService } from '../admin/admin.service';
+import { NavbarService } from '../navbar.service';
 
 @Component({
   selector: 'app-user',
@@ -14,6 +14,7 @@ export class UserComponent implements OnInit {
   loginGroup;
   error;
     ngOnInit() {
+      this.nav.show();
       this.loginGroup=this.builder.group({
         username:['',[Validators.required]],
         pwd: ['',[Validators.required]],

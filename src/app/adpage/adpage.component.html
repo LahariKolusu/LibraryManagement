@@ -2,32 +2,22 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-            <div>
-            <p class="name"><i class="fa fa-book fa-fw" aria-hidden="true"></i>Library</p>
             <ul>
-                <li> <i class="fa fa-home fa-fw icon" aria-hidden="true"></i><a routerLink="/home">Home</a></li>
-                <li><i class="fa fa-user-plus icon" aria-hidden="true"></i><a routerLink="/reg">Register</a></li>
-                <li>
-                    <div class="dropdown">
-                        <i class="fa fa-sign-in icon" aria-hidden="true"></i>
-                        <a routerLink="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">Login</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" routerLink="/admin">Admin Login</a>
-                            <a class="dropdown-item" routerLink="/user">User Login</a>
-                        </div>
-                    </div>
-                </li>
-                <li><i class="fa fa-book icon" aria-hidden="true"></i><a routerLink="/adminhome">Books</a></li>
-                <i class="fa fa-question-circle icon" aria-hidden="true"></i>
-                <li> <a routerLink="/about">About</a></li>
-                <i class="fa fa-sign-out icon" aria-hidden="true"></i>
-                <li> <a routerLink="/logout">Logout</a></li>
-            </ul>
-        </div>
+                <li><a routerLink="/home"><i class="fa fa-home fa-fw icon" aria-hidden="true"></i>HOME</a></li>
+                <li><a routerLink="#" data-toggle="modal" data-target="#modaladduser"><i class="fa fa-user icon" aria-hidden="true"></i>USERS</a></li>
+                <li><a routerLink="/adpage"><i class="fa fa-file icon" aria-hidden="true"></i>TRANSACTION</a></li>
+                <li><a routerLink="/adpage"><i class="fa fa-book icon" aria-hidden="true"></i>BOOKS</a></li>
+                <li><a routerLink="/adpage"><i class="fa fa-users icon" aria-hidden="true"></i>MEMBER</a></li>
+                <li><a routerLink="/adpage"><i class="fa fa-archive icon" aria-hidden="true"></i>ARCHIVE</a></li>
+                <li><a routerLink="/adpage"><i class="fa fa-search icon" aria-hidden="true"></i>ADVANCE SEARCH</a></li>
+                <li><a routerLink="/logout"><i class="fa fa-sign-out icon" aria-hidden="true"></i>LOGOUT</a></li>
+                </ul>
+                <span class="name">Welcome Librarian</span>
         </div>
         </nav>
     </header>
+    <div class="card">
+    <div class="card-body">
     <div class="borrowtable">
         <i class="fa fa-user fa-fw icon" aria-hidden="true"></i>
         <span>Borrow Table</span>
@@ -41,38 +31,60 @@
         <a class="nav-link" routerLink="#">Subject For Replacement</a>
     </nav>
     <div class="btnplus">
-            <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header text-center">
+      <div class="modal-header modalheader">
         <h4 class="modal-title w-100 font-weight-bold">Add Books</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true" id="cross">&times;</span>
         </button>
       </div>
       <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <i class="fas fa-envelope prefix grey-text"></i>
-          <input type="email" id="defaultForm-email" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
-        </div>
-
-        <div class="md-form mb-4">
-          <i class="fas fa-lock prefix grey-text"></i>
-          <input type="password" id="defaultForm-pass" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-        </div>
-
+        <form >
+          <div class="form-group">
+            <input type="number" placeholder="Enter account no" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Book Title" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Category" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Author" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="number" placeholder="Enter No Of Copies" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Pub" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Book Publisher" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter ISBN" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Copyright Year" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="date" placeholder="Enter Book Title" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Status" class="form-control">
+          </div>
+        </form>
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-default">Login</button>
+        <button class="btn btn-success form-control">Add</button>
       </div>
     </div>
   </div>
 </div>
-
-    <a routerLink="" class="btn btn-default btn-rounded mb-4 btn" id="plus"data-toggle="modal" data-target="#modalLoginForm"><span class="badge badge-dark">+</span> Add Books</a>
+<a routerLink="#" class="btn btn-default btn-rounded mb-4 btn" id="plus"data-toggle="modal" data-target="#modalLoginForm"><span class="badge badge-dark">+</span> Add Books</a>
         <button type="button" class="btn " id="print">
             <span class="badge badge-light"><i class="fa fa-print icon1" aria-hidden="true"></i></span> Print
         </button>
@@ -164,5 +176,47 @@
           </tr>
         </tbody>
       </table>
-    
+    </div>
+  </div>
 </body>
+<div class="modal fade" id="modaladduser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modalheader">
+        <h4 class="modal-title  font-weight-bold">Add User</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" id="cross">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <form >
+          <div class="form-group">
+            <input type="text" placeholder="Enter User Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Enter Password" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter First Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Last Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Matric No" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Department" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Level" class="form-control">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-success form-control">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

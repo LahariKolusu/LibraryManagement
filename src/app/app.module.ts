@@ -13,7 +13,6 @@ import { AboutComponent } from './about/about.component';
 import { AdpageComponent } from './adpage/adpage.component';
 import { AdminComponent } from './admin/admin.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { LoggedInComponent } from './logged-in/logged-in.component';
 import { AddbooksComponent } from './addbooks/addbooks.component';
 import { RegisterModule } from './register/register.module';
 import { AboutModule } from './about/about.module';
@@ -25,12 +24,12 @@ import { AdpageModule } from './adpage/adpage.module';
 import { UserModule } from './user/user.module';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { UserhomeModule } from './userhome/userhome.module';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     CuroselComponent,
     HomeComponent,
     RegisterComponent,
@@ -38,9 +37,9 @@ import { UserhomeModule } from './userhome/userhome.module';
     UserComponent,
     AboutComponent,
     AdpageComponent,
-    LoggedInComponent,
     AddbooksComponent,
     UserhomeComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +48,6 @@ import { UserhomeModule } from './userhome/userhome.module';
     ReactiveFormsModule,
     RegisterModule,
     AboutModule,
-    NavbarModule,
     HomeModule,
     AddbooksModule,
     AdminModule,

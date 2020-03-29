@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { NavbarService } from '../navbar.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
-  
   constructor(private nav:NavbarService) { }
 
   ngOnInit() {
-     this.nav.show();
+    this.nav.show();
+  
   }
 
 }

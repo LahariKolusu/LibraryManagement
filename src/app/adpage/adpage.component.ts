@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarService } from '../admin/admin.service';
+import { NavbarService } from '../navbar.service';
+// import { NavbarService } from '../admin/admin.service';
 
 @Component({
   selector: 'app-adpage',
@@ -11,7 +12,7 @@ export class AdpageComponent implements OnInit {
   constructor(private nav:NavbarService ) {}
   
   ngOnInit() {
-    this.nav.show();
+    this.nav.hide();
   }
 
 }

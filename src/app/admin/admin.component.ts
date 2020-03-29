@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
-import { NavbarService } from './admin.service';
+import { NavbarService } from '../navbar.service';
+
 
 @Component({
   selector: 'app-admin',
@@ -14,6 +15,7 @@ export class AdminComponent implements OnInit {
 loginGroup;
 error;
   ngOnInit() {
+    this.nav.show();
     this.loginGroup=this.builder.group({
       username:['',[Validators.required]],
       pwd: ['',[Validators.required]],
