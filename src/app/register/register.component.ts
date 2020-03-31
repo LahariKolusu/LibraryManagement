@@ -22,7 +22,7 @@ submitted = false;
       email:['',[Validators.required,Validators.email]],
       pwd: ['',[Validators.required,Validators.minLength(6)]],
       confirmpwd: ['',[Validators.required,Validators.minLength(6)]],
-      // idno:['',[Validators.required]],
+       idno:['',[Validators.required]],
       typeofuser:['',[Validators.required]]
     },{validators: customValidators })
   }
@@ -35,11 +35,13 @@ submitted = false;
     {
         return;
     }
-    alert('SUCCESS!!');
+    // alert('SUCCESS!!');
     let userdetails=JSON.stringify(this.regGroup.value);
     localStorage.setItem(this.regGroup.value.email,userdetails);
     localStorage.setItem(this.regGroup.value.typeofuser,userdetails);
-    // alert("value:"+this.regGroup.value.typeofuser);
+    // localStorage.setItem(this.regGroup.value.idno,userdetails);
+    // alert("value:"+this.regGroup.value.idno);
+    // let id=this.regGroup.value.idno;
     let type=this.regGroup.value.typeofuser;
     // alert(type);
     if(type=="admin")
@@ -47,7 +49,7 @@ submitted = false;
       // alert("control in if");
     this.router.navigate(['/admin']);
     }
-    else
+    if(type=="student")
     {
       // alert("control in else");
       this.router.navigate(['/user']);

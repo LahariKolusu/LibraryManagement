@@ -37,6 +37,13 @@
                         <div *ngIf="regGroup.controls.confirmpwd.errors.required">Password Must be Same</div>
                     </div>
                 </div>
+                <!-- <div class="form-group ">
+                    <input type="text" placeholder="Enter Your Id No"  class="form-control" ngModel formControlName="idno" [ngClass]="{ 'is-invalid': submitted &amp;&amp; regGroup.controls.idno.errors }">
+                    <div *ngIf="submitted &amp;&amp; regGroup.controls.idno.errors" class="text-danger">
+                        <div *ngIf="regGroup.controls.pwd.errors.required">Id No is required</div>
+                        <div *ngIf="regGroup.controls.pwd.errors.minlength">Password must be the Admin Id</div>
+                    </div>
+                </div> -->
                 <div class="form-group ">
                     <select  class="form-control" placeholder="Select Type Of User"  ngModel formControlName="typeofuser" [ngClass]="{ 'is-invalid': submitted &amp;&amp; regGroup.controls.typeofuser.errors }">
                         <option value="0">--Select Type Of User--</option>

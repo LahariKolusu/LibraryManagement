@@ -13,18 +13,17 @@ import { AboutComponent } from './about/about.component';
 import { AdpageComponent } from './adpage/adpage.component';
 import { AdminComponent } from './admin/admin.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { AddbooksComponent } from './addbooks/addbooks.component';
 import { RegisterModule } from './register/register.module';
 import { AboutModule } from './about/about.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { HomeModule } from './home/home.module';
-import { AddbooksModule } from './addbooks/addbooks.module';
 import { AdminModule } from './admin/admin.module';
 import { AdpageModule } from './adpage/adpage.module';
 import { UserModule } from './user/user.module';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { UserhomeModule } from './userhome/userhome.module';
 import { HeaderComponent } from './header/header.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -37,9 +36,9 @@ import { HeaderComponent } from './header/header.component';
     UserComponent,
     AboutComponent,
     AdpageComponent,
-    AddbooksComponent,
     UserhomeComponent,
     HeaderComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +48,6 @@ import { HeaderComponent } from './header/header.component';
     RegisterModule,
     AboutModule,
     HomeModule,
-    AddbooksModule,
     AdminModule,
     AdpageModule,
     UserModule,

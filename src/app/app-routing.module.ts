@@ -9,9 +9,9 @@ import { UserComponent } from './user/user.component';
 import { AboutComponent } from './about/about.component';
 import { AdpageComponent } from './adpage/adpage.component';
 import { AdminComponent } from './admin/admin.component';
-import { AddbooksComponent } from './addbooks/addbooks.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { HeaderComponent } from './header/header.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   {path:'header',component:HeaderComponent},
@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:'user',component:UserComponent},
   {path:'about',component:AboutComponent},
   {path:'adpage',component:AdpageComponent},
-  {path:'addbooks',component:AddbooksComponent},
+  {path:'logout',component:LogoutComponent},
   {path:'userhome',component:UserhomeComponent},
   {path:"**",redirectTo:"curosel"}
 ];
